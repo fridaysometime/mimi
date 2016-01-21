@@ -83,4 +83,46 @@ apply(x,margin,fun,...)margin=1表示行margin=2表示列,fun为指定函数
 
 控制流
 重复和循环
+for (XX in XX:XX)
+while(cond) statement
+条件循环
+if-else,ifelse,switch
+ifelse(cond,statement1,statement2)
+用户自编函数
+myfunction<-function(arg1,arg2,...)
+{
+statements
+return(object)
+}
 
+整合与重构
+转置
+t()
+aggregate(x,by,fun)
+x是待折叠的数据对象，By是一个变量名组成的列表，这些变量将被去掉以形成新的观测
+fun是用来计算描述性统计量的标量函数计算新观测中的值
+
+reshape包
+melt()
+cast(md,formula,function)
+
+第六章基本图形
+条形图
+barplot(矩阵或向量)
+如果要绘制的类别型变量是一个因子或者有序性因子，就可以使用函数plot()快速创建一个垂直条图形，无需用table函数将其表格化
+棘状图
+spine()
+饼图
+pie(x,labels)
+直方图
+hist（X）
+核密度图
+plot(density())
+箱线图
+boxplot(formula,data=dataframe)
+小提琴图
+vioplot(x1,x2...,names=,col=)
+点图
+dotchart(x,labels=)
+
+第七章基本统计分析
