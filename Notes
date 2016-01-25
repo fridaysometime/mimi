@@ -1,4 +1,4 @@
-coursera里的课程视频感觉没多大的用处，assignment总是和视频没多大的关系。今天才发现视频旁边有PDF可以下载，直接看看那个也可以。
+﻿coursera里的课程视频感觉没多大的用处，assignment总是和视频没多大的关系。今天才发现视频旁边有PDF可以下载，直接看看那个也可以。
 每次看视频，都说那么模糊，想看清楚都难，再加上字幕有时候有，有时候没有。稍微出点神就不知道在讲什么了。
 上个月看了一点R语言实战，中文版的书。看过就忘了，决定写点笔试，记载些有用的函数。
 
@@ -126,3 +126,41 @@ vioplot(x1,x2...,names=,col=)
 dotchart(x,labels=)
 
 第七章基本统计分析
+描述性统计分析
+summary()函数获取描述性统计量
+apply(),sapply()
+使用格式
+sapply(x,function,options)
+Hmisc包中的describe函数可返回变量和观测的数量，缺失值和唯一值得数目，平均值，分位数以及五个最大的值和
+五个最小的值
+aggregate()函数来分组获取描述性统计量，仅允许每次调用中使用平均数，标准差这样的单返回值函数。无法
+一次返回若干个统计量，若完成这项任务，可以用by(data,indices,function)
+
+用于创建和处理列联表的函数
+table（）使用N个类型变量创建一个N维列联表
+xtabs(formula,data)根据一个公式和一个矩阵或数据框创建一个N维列联表
+prop.table()
+margin.table()
+crosstable()生成二维列联表
+
+独立性检验
+1 卡方检验
+chisq.test()函数对二维表的行变量列变量进行卡方检验，p值表示从总体中抽取的样本的行变量和列变量是相互独立的概率
+2 Fisher检验
+fisher.test()进行Fisher精确检验
+3.CMH检验
+mantelhaen.test()
+
+VCD包中的assocstats()函数计算二维列联表的phi系数
+
+相关系数
+cor(x，use=,method=)计算三种相关系数，cov()计算协方差
+pcor(u,s)计算偏相关
+
+相关性的显著性检验
+cor.test(x,y,alternative=,method=)
+corr.test()计算相关矩阵的显著性检验
+T检验
+
+第八章回归
+用lm拟合线性回归：lm(formula,data)
